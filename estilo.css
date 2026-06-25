@@ -1,8 +1,5 @@
 /* ---------------------------------------------------------------------
    1. VARIÁVEIS GLOBAIS (CSS CUSTOM PROPERTIES)
-   Aqui eu defino as cores, fontes e espaçamentos do TEMA CLARO (padrão).
-   Usar variáveis facilita a troca de tema, pois basta sobrescrever
-   esses valores quando a classe ".tema-escuro" estiver presente no body.
 --------------------------------------------------------------------- */
 :root {
     /* Cores principais */
@@ -25,7 +22,7 @@
     --fonte-titulo: 'Poppins', sans-serif;
     --fonte-texto: 'Inter', sans-serif;
 
-    /* Espaçamentos padronizados */
+    /* Espaçamentos padronizados (escala consistente) */
     --espaco-sm: 0.5rem;
     --espaco-md: 1rem;
     --espaco-lg: 2rem;
@@ -40,9 +37,6 @@
 
 /* ---------------------------------------------------------------------
    2. TEMA ESCURO
-   Quando a classe "tema-escuro" é adicionada ao <body> via JavaScript,
-   sobrescrevemos as variáveis acima para os tons escuros correspondentes.
-   O tema inteiro se adapta automaticamente sem precisar duplicar regras de estilo.
 --------------------------------------------------------------------- */
 body.tema-escuro {
     --cor-fundo: #11131c;
@@ -63,7 +57,7 @@ body.tema-escuro {
 }
 
 html {
-    scroll-behavior: smooth; /* Ativa o scroll nativo do CSS para os links de âncora */
+    scroll-behavior: smooth; /* Ativa o scroll suave nativo do CSS para os links de âncora */
 }
 
 body {
@@ -164,7 +158,7 @@ button {
     color: var(--cor-primaria);
 }
 
-/* Lista de links do menu - exibida em linha no desktop */
+/* Lista de links do menu - exibida em linha (row) no desktop */
 .nav__list {
     display: flex;
     gap: var(--espaco-lg);
@@ -403,7 +397,7 @@ button {
     font-size: 1.1rem;
 }
 
-/* Item de linha do tempo */
+/* Item de linha do tempo (usado em formação acadêmica e cursos) */
 .timeline-item {
     border-left: 2px solid var(--cor-primaria);
     padding-left: var(--espaco-md);
@@ -486,6 +480,11 @@ button {
     gap: var(--espaco-lg);
 }
 
+.portfolio__grid--duas-colunas {
+    grid-template-columns: repeat(2, minmax(280px, 480px));
+    justify-content: center;
+}
+
 .card-projeto {
     background-color: var(--cor-fundo);
     border: 1px solid var(--cor-borda);
@@ -503,6 +502,24 @@ button {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.card-projeto__img--placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--cor-fundo-alt);
+    color: var(--cor-texto-suave);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.card-projeto__img-icone {
+    width: 38px;
+    height: 38px;
+    opacity: 0.6;
 }
 
 .card-projeto__conteudo {
@@ -547,6 +564,22 @@ button {
 
 .card-projeto__link:hover {
     padding-left: 0.3rem;
+}
+
+.card-projeto__link--indisponivel {
+    display: inline-block;
+    color: var(--cor-texto-suave);
+    background-color: var(--cor-fundo-alt);
+    border: 1px solid var(--cor-borda);
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: default;
+}
+
+.card-projeto__link--indisponivel:hover {
+    padding-left: 0.8rem; /* anula o efeito de hover do link normal */
 }
 
 /* ---------------------------------------------------------------------
@@ -756,7 +789,7 @@ button {
         display: flex;
     }
 
-    /* O menu de navegação passa a ser um painel deslizante */
+    /* O menu de navegação passa a ser um painel deslizante (off-canvas) */
     .nav {
         position: fixed;
         top: var(--altura-header);

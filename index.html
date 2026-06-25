@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Silva | Portfólio Profissional</title>
-    <meta name="description" content="Portfólio pessoal de João Silva - Desenvolvedor Web">
+    <title>Iago Derik | Portfólio Profissional</title>
+    <meta name="description" content="Portfólio pessoal de Iago Derik - Desenvolvedor Web">
 
     <!-- Importação da folha de estilos externa (CSS puro, sem frameworks) -->
     <link rel="stylesheet" href="estilo.css">
@@ -22,7 +22,7 @@
         <div class="container header__container">
 
             <!-- Logo / Nome do site -->
-            <a href="#topo" class="logo">João<span>.dev</span></a>
+            <a href="#topo" class="logo">Iago<span>.dev</span></a>
 
             <!-- Menu de navegação principal (links de âncora para scroll suave) -->
             <nav class="nav" id="nav">
@@ -96,8 +96,8 @@
                 <!-- Foto de perfil (placeholder substituível pelo usuário) -->
                 <div class="sobre__img-wrapper">
                     <img
-                        src="https://via.placeholder.com/400x400.png?text=Sua+Foto+Aqui"
-                        alt="Foto de perfil de João Silva"
+                        src="/prints projetos/minha foto.png"
+                        alt="Foto de perfil de Iago Derik"
                         class="sobre__img"
                     >
                 </div>
@@ -229,9 +229,17 @@
                 <p class="section__subtitle text-center">Meus trabalhos</p>
                 <h2 class="section__title text-center">Portfólio</h2>
 
-                <div class="portfolio__grid">
+                <!--
+                    OBSERVAÇÃO IMPORTANTE SOBRE O GRID:
+                    A classe "portfolio__grid--duas-colunas" (definida no estilo.css) faz com que
+                    os cards se distribuam de forma centralizada e proporcional quando há apenas
+                    2 projetos, evitando o "buraco" visual que ficaria caso a grade continuasse
+                    fixa em 3 colunas. Se um terceiro projeto for adicionado no futuro, basta
+                    remover essa classe extra para o grid voltar a se comportar com 3 colunas.
+                -->
+                <div class="portfolio__grid portfolio__grid--duas-colunas">
 
-                    <!-- Card de projeto 1 -->
+                    <!-- Card de projeto 1 (completo: com imagem e link) -->
                     <article class="card-projeto">
                         <img src="/prints projetos/projeto site velha manna.png" alt="Captura de tela do projeto Site para venda de tricotins e amigurumis" class="card-projeto__img">
                         <div class="card-projeto__conteudo">
@@ -249,9 +257,24 @@
                         </div>
                     </article>
 
-                    <!-- Card de projeto 2 -->
+                    <!-- Card de projeto 2 (sem imagem e sem link disponível até o momento) -->
                     <article class="card-projeto">
-                        <img src="https://via.placeholder.com/500x300.png?text=Dashboard+Financeiro" alt="Captura de tela do dashboard financeiro" class="card-projeto__img">
+
+                        <!--
+                            Como este projeto ainda não possui uma captura de tela disponível,
+                            usamos um "placeholder" visual estilizado (ícone + texto) em vez de
+                            uma <img> quebrada ou de uma imagem genérica da internet. Isso mantém
+                            o card elegante e profissional mesmo sem a imagem real.
+                        -->
+                        <div class="card-projeto__img card-projeto__img--placeholder">
+                            <svg class="card-projeto__img-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <path d="M21 15l-5-5L5 21"></path>
+                            </svg>
+                            <span>Imagem em breve</span>
+                        </div>
+
                         <div class="card-projeto__conteudo">
                             <h3 class="card-projeto__titulo">Interface de controle de Notas Fiscais</h3>
                             <p class="card-projeto__desc">
@@ -265,8 +288,16 @@
                                 <span class="tag">Power Automate</span>
                                 <span class="tag">React</span>
                             </div>
+
+                            <!--
+                                Como ainda não há um link público para este projeto (é uma
+                                solução interna/corporativa), exibimos uma badge informativa
+                                no lugar do link "Ver projeto", em vez de deixar o espaço vazio.
+                            -->
+                            <span class="card-projeto__link card-projeto__link--indisponivel">Projeto interno · sem link público</span>
                         </div>
                     </article>
+
                 </div>
             </div>
         </section>
