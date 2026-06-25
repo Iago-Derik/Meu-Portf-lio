@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Silva | Portfólio Profissional</title>
+    <meta name="description" content="Portfólio pessoal de João Silva - Desenvolvedor Web">
+
+    <!-- Importação da folha de estilos externa (CSS puro, sem frameworks) -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Fonte do Google Fonts para melhorar a tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===================== HEADER / CABEÇALHO FIXO ===================== -->
+    <!-- O header contém a logo, o menu de navegação e os botões de tema/hamburger -->
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <!-- Logo / Nome do site -->
+            <a href="#topo" class="logo">João<span>.dev</span></a>
+
+            <!-- Menu de navegação principal (links de âncora para scroll suave) -->
+            <nav class="nav" id="nav">
+                <ul class="nav__list" id="navList">
+                    <li><a href="#sobre" class="nav__link">Sobre mim</a></li>
+                    <li><a href="#formacao" class="nav__link">Formação</a></li>
+                    <li><a href="#portfolio" class="nav__link">Portfólio</a></li>
+                    <li><a href="#contato" class="nav__link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <!-- Botão de alternância de tema claro/escuro -->
+                <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+                    <!-- Ícone de sol (tema claro) -->
+                    <svg id="iconSun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Ícone de lua (tema escuro) -->
+                    <svg id="iconMoon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Botão hamburguer (visível apenas em telas pequenas via CSS) -->
+                <button id="hamburger" class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                    <span class="hamburger__bar"></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Âncora invisível usada como referência para o topo da página -->
+    <div id="topo"></div>
+
+    <main>
+
+        <!-- ===================== SEÇÃO HERO / INTRODUÇÃO ===================== -->
+        <section class="hero">
+            <div class="container hero__container">
+                <p class="hero__greeting">Olá, eu sou</p>
+                <h1 class="hero__name">Iago Derik</h1>
+                <h2 class="hero__role">Desenvolvedor Web</h2>
+                <p class="hero__text">
+                    Transformo ideias em interfaces bonitas, funcionais e acessíveis.
+                    Apaixonado por tecnologia, design e por criar experiências digitais
+                    que fazem a diferença na vida das pessoas, ajudando também com automações operacionais e atuando na área de Inteligência.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#portfolio" class="btn btn--primary">Ver Portfólio</a>
+                    <a href="#contato" class="btn btn--outline">Fale Comigo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SEÇÃO SOBRE MIM ===================== -->
+        <section id="sobre" class="section sobre">
+            <div class="container sobre__container">
+
+                <!-- Foto de perfil (placeholder substituível pelo usuário) -->
+                <div class="sobre__img-wrapper">
+                    <img
+                        src="https://via.placeholder.com/400x400.png?text=Sua+Foto+Aqui"
+                        alt="Foto de perfil de João Silva"
+                        class="sobre__img"
+                    >
+                </div>
+
+                <div class="sobre__content">
+                    <p class="section__subtitle">Conheça um pouco mais</p>
+                    <h2 class="section__title">Sobre mim</h2>
+
+                    <p class="sobre__text">
+                        Tenho 23 anos e sou natural de Campinas. Estudo Análise e Desenvolvimento
+                        de Sistemas e atuo como desenvolvedor de automações inteligentes há cerca de 1 ano e meio.
+                        Pretendo seguir na área de desenvolvimento web, buscando sempre aprender novas tecnologias e aprimorar minhas habilidades.
+                        Gosto de resolver problemas reais através da tecnologia, sempre buscando
+                        unir um código limpo a um design que realmente encante quem utiliza.
+                    </p>
+                    <p class="sobre__text">
+                        Nas horas livres, gosto de jogar futebol, ler livros,
+                        participar de comunidades de
+                        tecnologia, trocando experiências com outros desenvolvedores, além de criar novos projetos de automações para empresas como forma de treino e estudo.
+                    </p>
+
+                    <!-- Lista de informações rápidas / hobbies em formato de "cards" -->
+                    <ul class="sobre__info-list">
+                        <li>
+                            <strong>Idade:</strong> 23 anos
+                        </li>
+                        <li>
+                            <strong>Localização:</strong> Campinas, SP
+                        </li>
+                        <li>
+                            <strong>Hobbies:</strong> Futebol, leitura, tecnologia, cantar
+                        </li>
+                        <li>
+                            <strong>Disponibilidade:</strong> Freelancer / CLT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SEÇÃO FORMAÇÃO ===================== -->
+        <section id="formacao" class="section formacao">
+            <div class="container">
+                <p class="section__subtitle text-center">Minha trajetória</p>
+                <h2 class="section__title text-center">Formação</h2>
+
+                <div class="formacao__grid">
+
+                    <!-- Bloco: Formação Acadêmica -->
+                    <div class="formacao__bloco">
+                        <h3 class="formacao__bloco-titulo">🎓 Formação Acadêmica</h3>
+
+                        <div class="timeline-item">
+                            <span class="timeline-item__data">2025 - Atualmente</span>
+                            <h4 class="timeline-item__titulo">Análise e Desenvolvimento de Sistemas</h4>
+                            <p class="timeline-item__local">Faculdade de Tecnologia (Uninter)</p>
+                            <p class="timeline-item__desc">
+                                Curso superior focado em desenvolvimento de software,
+                                banco de dados, redes e engenharia de software.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-item__data">2018 - 2020</span>
+                            <h4 class="timeline-item__titulo">Ensino Médio</h4>
+                            <p class="timeline-item__local">Escola Estadual E.E Prof. Raquel Saes Melhado da Silva</p>
+                            <p class="timeline-item__desc">
+                                Formação completa de ensino médio, com participação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bloco: Cursos Complementares -->
+                    <div class="formacao__bloco">
+                        <h3 class="formacao__bloco-titulo">💻 Cursos Realizados</h3>
+
+                        <div class="timeline-item">
+                            <span class="timeline-item__data">2021</span>
+                            <h4 class="timeline-item__titulo">Python para automação de processos</h4>
+                            <p class="timeline-item__local">Hashtag Treinamentos</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-item__data">2025 - Atualmente</span>
+                            <h4 class="timeline-item__titulo">HTML5, CSS3 e JS - Desenvolvimento Web completo</h4>
+                            <p class="timeline-item__local">Origamid</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-item__data">2025</span>
+                            <h4 class="timeline-item__titulo">Curso de lógica de programação, Git e github</h4>
+                            <p class="timeline-item__local">Curso em vídeo - Gustavo Guanabara</p>
+                        </div>
+                    </div>
+
+                    <!-- Bloco: Idiomas -->
+                    <div class="formacao__bloco">
+                        <h3 class="formacao__bloco-titulo">🌎 Idiomas</h3>
+
+                        <!-- Barra de progresso para representar nível de idioma -->
+                        <div class="idioma">
+                            <div class="idioma__cabecalho">
+                                <span>Português</span>
+                                <span>Nativo</span>
+                            </div>
+                            <div class="idioma__barra">
+                                <div class="idioma__progresso" style="width: 100%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="idioma">
+                            <div class="idioma__cabecalho">
+                                <span>Inglês</span>
+                                <span>Iniciante</span>
+                            </div>
+                            <div class="idioma__barra">
+                                <div class="idioma__progresso" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SEÇÃO PORTFÓLIO ===================== -->
+        <section id="portfolio" class="section portfolio">
+            <div class="container">
+                <p class="section__subtitle text-center">Meus trabalhos</p>
+                <h2 class="section__title text-center">Portfólio</h2>
+
+                <div class="portfolio__grid">
+
+                    <!-- Card de projeto 1 -->
+                    <article class="card-projeto">
+                        <img src="https://via.placeholder.com/500x300.png?text=Projeto+E-commerce" alt="Captura de tela do projeto E-commerce" class="card-projeto__img">
+                        <div class="card-projeto__conteudo">
+                            <h3 class="card-projeto__titulo">Site para venda de tricotins e amigurumis</h3>
+                            <p class="card-projeto__desc">
+                                Site completo desenvolvido com HTML, CSS e JavaScript puro, com sistema de admin para gerenciar produtos, acessos, estoque e pedidos, redirecionando para o WhatsApp. Possui um banco de dados criado com supabase para armazenar informações de produtos, pedidos e clientes, garantindo uma experiência de compra fluida e segura.
+                            </p>
+                            <div class="card-projeto__tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Supabase</span>
+                            </div>
+                            <a href="https://velha-manna.vercel.app" class="card-projeto__link" target="_blank">Ver projeto →</a>
+                        </div>
+                    </article>
+
+                    <!-- Card de projeto 2 -->
+                    <article class="card-projeto">
+                        <img src="https://via.placeholder.com/500x300.png?text=Dashboard+Financeiro" alt="Captura de tela do dashboard financeiro" class="card-projeto__img">
+                        <div class="card-projeto__conteudo">
+                            <h3 class="card-projeto__titulo">Interface de controle de Notas Fiscais</h3>
+                            <p class="card-projeto__desc">
+                                Painel administrativo para controle de notas fiscais,
+                                com funcionalidades de criação, edição e exclusão, contando com atualizações em tempo real de pedidos, requisições, status de pagamento e faturamento.
+                            </p>
+                            <div class="card-projeto__tags">
+                                <span class="tag">Power Apps</span>
+                                <span class="tag">API</span>
+                                <span class="tag">UX/UI</span>
+                                <span class="tag">Power Automate</span>
+                                <span class="tag">React</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card de projeto 3 -->
+                    <article class="card-projeto">
+                        <img src="https://via.placeholder.com/500x300.png?text=App+de+Tarefas" alt="Captura de tela do aplicativo de tarefas" class="card-projeto__img">
+                        <div class="card-projeto__conteudo">
+                            <h3 class="card-projeto__titulo">Gerenciador de Tarefas</h3>
+                            <p class="card-projeto__desc">
+                                Aplicação para organização de tarefas diárias com recursos de
+                                arrastar e soltar, prioridades e modo escuro.
+                            </p>
+                            <div class="card-projeto__tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">LocalStorage</span>
+                                <span class="tag">CSS Grid</span>
+                            </div>
+                            <a href="#" class="card-projeto__link">Ver projeto →</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SEÇÃO CONTATO ===================== -->
+        <section id="contato" class="section contato">
+            <div class="container contato__container">
+
+                <div class="contato__info">
+                    <p class="section__subtitle">Vamos conversar?</p>
+                    <h2 class="section__title">Contato</h2>
+                    <p class="contato__texto">
+                        Estou disponível para novas oportunidades, projetos freelance
+                        ou apenas para trocar uma ideia sobre tecnologia. Preencha o
+                        formulário ao lado e retornarei o mais breve possível.
+                    </p>
+
+                    <ul class="contato__lista">
+                        <li>📧 joao.silva@email.com</li>
+                        <li>📱 (11) 99999-9999</li>
+                        <li>📍 São Paulo, SP - Brasil</li>
+                    </ul>
+                </div>
+
+                <!-- Formulário de contato com validação via JavaScript -->
+                <form id="formContato" class="form-contato" novalidate>
+
+                    <div class="form-grupo">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            class="form-input"
+                            placeholder="Digite seu nome completo"
+                        >
+                        <!-- Espaço reservado para mensagem de erro específica do campo -->
+                        <span class="form-erro" id="erroNome"></span>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-input"
+                            placeholder="seuemail@dominio.com"
+                        >
+                        <span class="form-erro" id="erroEmail"></span>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            class="form-input form-textarea"
+                            rows="5"
+                            placeholder="Escreva sua mensagem aqui..."
+                        ></textarea>
+                        <span class="form-erro" id="erroMensagem"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary form-btn">Enviar Mensagem</button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== MODAL DE SUCESSO (FEEDBACK VISUAL) ===================== -->
+    <!-- Modal customizado exibido via JavaScript após o envio bem-sucedido do formulário -->
+    <div id="modalSucesso" class="modal" aria-hidden="true">
+        <div class="modal__conteudo">
+            <button id="fecharModal" class="modal__fechar" aria-label="Fechar modal">&times;</button>
+            <div class="modal__icone">✔</div>
+            <h3 class="modal__titulo">Mensagem enviada!</h3>
+            <p class="modal__texto">
+                Obrigado pelo contato. Sua mensagem foi enviada com sucesso e
+                retornarei o mais breve possível.
+            </p>
+            <button id="modalOk" class="btn btn--primary">Fechar</button>
+        </div>
+    </div>
+
+    <!-- ===================== FOOTER / RODAPÉ ===================== -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>&copy; <span id="anoAtual"></span> João Silva. Todos os direitos reservados.</p>
+            <div class="footer__redes">
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Importação do JavaScript (deve ficar ao final para garantir que o DOM já esteja carregado) -->
+    <script src="script.js"></script>
+</body>
+</html>
