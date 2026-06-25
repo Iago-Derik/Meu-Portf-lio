@@ -1,9 +1,3 @@
-/* =====================================================================
-   ARQUIVO: script.js
-   DESCRIÇÃO: Interatividade do portfólio utilizando apenas JavaScript
-   Vanilla (puro), sem nenhuma biblioteca ou framework externo.
-   ===================================================================== */
-
 /* Garante que o script só execute depois que todo o HTML estiver carregado,
    evitando erros de "elemento não encontrado" (null). */
 document.addEventListener('DOMContentLoaded', function () {
@@ -39,11 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* =================================================================
        2. ALTERNÂNCIA DE TEMA (CLARO / ESCURO)
-       Estratégia: adicionamos/removemos a classe "tema-escuro" no <body>.
-       Como o CSS usa "var(--cor-x)", a troca de tema é refletida em todo
-       o site automaticamente. Também salvamos a preferência do usuário
-       no localStorage, para que o tema escolhido seja mantido entre
-       visitas (persistência simples no navegador).
     ================================================================= */
 
     // Função responsável por aplicar visualmente o tema (ícones e classe do body)
@@ -186,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return true;
     }
 
-    // Validação "em tempo real": à medida que o usuário sai de um campo (evento blur),
+    // Validação "em tempo real": à medida que o usuário sai de um campo,
     // já validamos aquele campo individualmente, dando feedback mais rápido.
     campoNome.addEventListener('blur', validarNome);
     campoEmail.addEventListener('blur', validarEmail);
@@ -194,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Evento principal de envio do formulário
     formulario.addEventListener('submit', function (evento) {
-        evento.preventDefault(); // Impede o comportamento padrão (recarregar a página)
+        evento.preventDefault(); // Impede o comportamento padrão (de recarregar a página)
 
         // Executamos as três validações. Usamos variáveis separadas (em vez de
         // "&&" direto) para garantir que TODOS os campos sejam validados e
@@ -207,9 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (nomeValido && emailValido && mensagemValida) {
 
             // ---- SIMULAÇÃO DE ENVIO ----
-            // Em um cenário real, aqui faríamos uma requisição (fetch) para um
-            // servidor/API de e-mail. Como é uma simulação para fins didáticos,
-            // apenas limpamos o formulário e exibimos a confirmação visual.
+            // apenas limpa o formulário e exibe a confirmação visual.
 
             formulario.reset(); // Limpa todos os campos do formulário
 
@@ -220,9 +207,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* =================================================================
        5. MODAL DE SUCESSO (CONFIRMAÇÃO VISUAL CUSTOMIZADA)
-       Em vez de usar o alert() simples do navegador, criamos um modal
-       estilizado em HTML/CSS e controlamos sua exibição via JavaScript,
-       adicionando/removendo a classe "ativo".
     ================================================================= */
 
     function abrirModal() {
@@ -239,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
     botaoFecharModal.addEventListener('click', fecharModal);
     botaoModalOk.addEventListener('click', fecharModal);
 
-    // Fecha o modal também ao clicar na área escura (overlay) fora da caixa de conteúdo
+    // Fecha o modal também ao clicar na área escura fora da caixa de conteúdo
     modal.addEventListener('click', function (evento) {
         if (evento.target === modal) {
             fecharModal();
@@ -265,9 +249,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* =================================================================
        7. DESTAQUE DO LINK ATIVO NO MENU CONFORME O SCROLL (EXTRA)
-       Utiliza a Intersection Observer API para detectar qual seção está
-       visível na tela e adicionar uma classe de destaque ao link
-       correspondente no menu de navegação, melhorando a usabilidade.
     ================================================================= */
     const secoes = document.querySelectorAll('section[id]');
 

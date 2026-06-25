@@ -1,13 +1,7 @@
-/* =====================================================================
-   ARQUIVO: estilo.css
-   DESCRIÇÃO: Estilização completa do portfólio utilizando apenas CSS3 puro.
-   Não há nenhum framework (Bootstrap, Tailwind, etc.) sendo utilizado aqui.
-   ===================================================================== */
-
 /* ---------------------------------------------------------------------
    1. VARIÁVEIS GLOBAIS (CSS CUSTOM PROPERTIES)
-   Aqui definimos as cores, fontes e espaçamentos do TEMA CLARO (padrão).
-   Usar variáveis facilita MUITO a troca de tema, pois basta sobrescrever
+   Aqui eu defino as cores, fontes e espaçamentos do TEMA CLARO (padrão).
+   Usar variáveis facilita a troca de tema, pois basta sobrescrever
    esses valores quando a classe ".tema-escuro" estiver presente no body.
 --------------------------------------------------------------------- */
 :root {
@@ -31,7 +25,7 @@
     --fonte-titulo: 'Poppins', sans-serif;
     --fonte-texto: 'Inter', sans-serif;
 
-    /* Espaçamentos padronizados (escala consistente) */
+    /* Espaçamentos padronizados */
     --espaco-sm: 0.5rem;
     --espaco-md: 1rem;
     --espaco-lg: 2rem;
@@ -48,8 +42,7 @@
    2. TEMA ESCURO
    Quando a classe "tema-escuro" é adicionada ao <body> via JavaScript,
    sobrescrevemos as variáveis acima para os tons escuros correspondentes.
-   Como todo o CSS do site usa "var(--cor-x)", o tema inteiro se adapta
-   automaticamente sem precisar duplicar regras de estilo.
+   O tema inteiro se adapta automaticamente sem precisar duplicar regras de estilo.
 --------------------------------------------------------------------- */
 body.tema-escuro {
     --cor-fundo: #11131c;
@@ -70,7 +63,7 @@ body.tema-escuro {
 }
 
 html {
-    scroll-behavior: smooth; /* Ativa o scroll suave nativo do CSS para os links de âncora */
+    scroll-behavior: smooth; /* Ativa o scroll nativo do CSS para os links de âncora */
 }
 
 body {
@@ -117,7 +110,7 @@ button {
 }
 
 /* ---------------------------------------------------------------------
-   4. TÍTULOS DE SEÇÃO (PADRÃO REUTILIZÁVEL)
+   4. TÍTULOS DE SEÇÃO
 --------------------------------------------------------------------- */
 .section {
     padding: var(--espaco-xl) 0;
@@ -171,7 +164,7 @@ button {
     color: var(--cor-primaria);
 }
 
-/* Lista de links do menu - exibida em linha (row) no desktop */
+/* Lista de links do menu - exibida em linha no desktop */
 .nav__list {
     display: flex;
     gap: var(--espaco-lg);
@@ -410,7 +403,7 @@ button {
     font-size: 1.1rem;
 }
 
-/* Item de linha do tempo (usado em formação acadêmica e cursos) */
+/* Item de linha do tempo */
 .timeline-item {
     border-left: 2px solid var(--cor-primaria);
     padding-left: var(--espaco-md);
@@ -763,7 +756,7 @@ button {
         display: flex;
     }
 
-    /* O menu de navegação passa a ser um painel deslizante (off-canvas) */
+    /* O menu de navegação passa a ser um painel deslizante */
     .nav {
         position: fixed;
         top: var(--altura-header);
